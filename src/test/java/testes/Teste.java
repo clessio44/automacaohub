@@ -1,16 +1,15 @@
 package testes;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Before;
 import org.junit.Test;
 //import org.junit.jupiter.params.ParameterizedTest;
 //import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
 
-import stepsPostivo.CadastroComSucesso;
-import stepsPostivo.Drive;
-import stepsPostivo.Login;
-import stepsPostivo.PesquisaLupa;
-import stepsPostivo.PesquisarPorClick;
+import PageObjectTDD.Drive;
+import PageObjectTDD.Login;
 
 public class Teste {
 
@@ -20,38 +19,49 @@ public class Teste {
 	public void Abrir() {
 		new Drive();
 		driver = Drive.AbrirNavegador();
-
 	}
-
 	@Test
-	public void FazerLogin() throws Exception {
+	public void EntrarNaTelaDeLoginComSucesso() throws Exception {
 		new Login();
-		Login.FazerLogin(driver);
-//		Login.FazerLogin(name, password, driver);
+		Login.EntrarTelaLogin(driver);
+		Login.PreencherLoginComSucesso(driver);
+		Login.FazerLoginComSucesso(driver);
+		Login.Sair(driver);
+		
 	}
-
 	@Test
-	public void RealizarCadastro() throws InterruptedException {
-		new CadastroComSucesso().AbrirMenuUserEIniciarCadastroPositivo(driver);
+	public void EntrarNaTelaDeLoginSemSucesso() throws Exception {
+		new Login();
+		Login.EntrarTelaLogin(driver);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		Login.PreencherLoginSemSucesso(driver);
+		Login.FazerLoginSemSucesso(driver);
+		Login.Sair(driver);
 	}
 
-//	@ParameterizedTest
-//	@ValueSource(strings = {"Cadastro02,","Cadastro02"})
-//	public void palindromes(String user, String password) {
-//	    //assertTrue(StringUtils.isPalindrome(candidate));
+
+//	@Test
+//	public void RealizarCadastro() throws InterruptedException {
+//		new CadastroComSucesso().AbrirMenuUserEIniciarCadastroPositivo(driver);
 //	}
-
-	@Test
-	public void ClickProduto() {
-		new PesquisarPorClick();
-		// driver = PesquisarPorClick.ClicarCampoPesquisa();
-		PesquisarPorClick.ClicarCampoPesquisa(driver);
-	}
-
-	@Test
-	public void PesquisarComLupa() {
-		new stepsPostivo.PesquisaLupa();
-		PesquisaLupa.ClicarCampoPesquisa(driver);
-	}
+//
+////	@ParameterizedTest
+////	@ValueSource(strings = {"Cadastro02,","Cadastro02"})
+////	public void palindromes(String user, String password) {
+////	    //assertTrue(StringUtils.isPalindrome(candidate));
+////	}
+//
+//	@Test
+//	public void ClickProduto() {
+//		new PesquisarPorClick();
+//		// driver = PesquisarPorClick.ClicarCampoPesquisa();
+//		PesquisarPorClick.ClicarCampoPesquisa(driver);
+//	}
+//
+//	@Test
+//	public void PesquisarComLupa() {
+//		new stepsPostivo.PesquisaLupa();
+//		PesquisaLupa.ClicarCampoPesquisa(driver);
+//	}
 
 }

@@ -1,4 +1,4 @@
-package stepsPostivo;
+package PageObjectTDD;
  
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +15,5 @@ public class Drive {
 		driver.manage().window().maximize();	
 		driver.get("https://www.advantageonlineshopping.com/#/");
 		return driver;
-	}
-
-	
+	}	
 }

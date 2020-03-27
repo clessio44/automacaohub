@@ -1,4 +1,4 @@
-package stepsPostivo;
+package PageObjectTDD;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -55,6 +55,7 @@ public class CadastroComSucesso {
 		WebElement element = driver.findElement(By.name("countryListboxRegisterPage"));
 		Select combo = new Select(element);
 		combo.selectByVisibleText("Brazil");
+		
 		driver.findElement(By.name("cityRegisterPage")).sendKeys(city);
 		
 		JavascriptExecutor endereco = (JavascriptExecutor)driver;
