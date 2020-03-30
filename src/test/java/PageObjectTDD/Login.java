@@ -64,7 +64,7 @@ public class Login {
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.findElement(By.id("sign_in_btnundefined")).click();
 	}
-	
+	 
 	public static void Sair(WebDriver driver) {
 		driver.close();
 	}

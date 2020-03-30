@@ -44,8 +44,9 @@ public class Teste {
 		CadastroComSucesso.AbrirLink(driver);
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		CadastroComSucesso.DetalhesDaConta(driver);
-		
-
+		CadastroComSucesso.PersonalDetails(driver);
+		CadastroComSucesso.Address(driver);
+		CadastroComSucesso.check(driver);
 	
 	}
 

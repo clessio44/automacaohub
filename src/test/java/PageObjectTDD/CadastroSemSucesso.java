@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CadastroComSucesso {
+public class CadastroSemSucesso {
 	
 	public static WebDriver driver;
 	
@@ -22,15 +22,11 @@ public class CadastroComSucesso {
 		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]")).click();
 		//driver.findElement(By.className("create-new-account ng-scope")).click();
 	}
-	
-	public static void DetalhesDaConta(WebDriver driver) throws InterruptedException {
-//		WebElement validacao = driver.findElement(By.xpath("//a[@class='create-new-account ng-scope']"));
-//		String esperado = "CREATE NEW ACCOUNT";
-//		Assert.assertEquals(esperado, validacao.getText());
+	public static void DetalhesDaContaComDadosInvalidos(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]")).click();
-		String name = "Cadastro04";
-		String email = "cadastro04@gmail.com";
-		String password = "Cadastro04";
+		String name = "01234567890123456789";
+		String email = "cadastrocadastrocadastro";
+		String password = "aaaaaaaaaaaaaaaaaa";
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("usernameRegisterPage")));
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
@@ -42,11 +38,11 @@ public class CadastroComSucesso {
 		JavascriptExecutor detalhes = (JavascriptExecutor)driver;
 		detalhes.executeScript("window.scrollBy(0,100)");
 	}
-	 
-	public static void PersonalDetails(WebDriver driver) {
-		String name = "Cadastro04";
-		String lastname = "LastCadastro";
-		String phone = "11 99999999";
+	
+	public static void PersonalDetailsComDadosInvalidos(WebDriver driver) {
+		String name = "01234567890123456789";
+		String lastname = "01234567890123456789";
+		String phone = "999999999999999999";
 		
 		driver.findElement(By.name("first_nameRegisterPage")).sendKeys(name);
 		driver.findElement(By.name("last_nameRegisterPage")).sendKeys(lastname);
@@ -56,12 +52,12 @@ public class CadastroComSucesso {
 		personal.executeScript("window.scrollBy(0,100)");
 	}
 	
-	public static void Address(WebDriver driver) {
+	public static void AddressComDadosInvalidos(WebDriver driver) {
 		
-		String city = "Barueri";
-		String rua = "Antonio João";
-		String state = "São Paulo";
-		String postalcode = "06226-230";
+		String city = "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj";
+		String rua = "1111111111111111111111111111";
+		String state = "00000000000  ";
+		String postalcode = "00000000000000000000000    ";
 		
 		WebElement element = driver.findElement(By.name("countryListboxRegisterPage"));
 		Select combo = new Select(element);
@@ -73,19 +69,15 @@ public class CadastroComSucesso {
 		
 		JavascriptExecutor address = (JavascriptExecutor)driver;
 		address.executeScript("window.scrollBy(0,100)");
+		
 	}
-	
 	public static void check(WebDriver driver) throws InterruptedException {
-				
+		
 		JavascriptExecutor enderecofinal = (JavascriptExecutor)driver;
 		enderecofinal.executeScript("window.scrollBy(0,050)");
 		
 		driver.findElement(By.name("i_agree")).click();
-		driver.findElement(By.id("register_btnundefined")).click();
-		
-		//element = driver.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
-		//String login = element.getText();
-		//Assert.assertEquals(name, login);
+		driver.findElement(By.id("register_btnundefined")).click();	
 	}
 	public static void Sair(WebDriver driver) {
 		driver.close();

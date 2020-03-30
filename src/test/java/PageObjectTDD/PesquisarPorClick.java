@@ -1,6 +1,6 @@
 package PageObjectTDD;
 
-import org.junit.Assert;
+import org.junit.Assert; 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +17,9 @@ public class PesquisarPorClick {
 		Assert.assertEquals("3 ITEMS", login);
 		return driver;
 	
+	}
+	public static void Sair(WebDriver driver) {
+		driver.close();
 	}
 
 }
