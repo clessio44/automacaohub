@@ -8,8 +8,8 @@ import org.junit.Test;
 //import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
 
+import PageObjectTDD.CadastroComSucesso;
 import PageObjectTDD.Drive;
-import PageObjectTDD.Login;
 
 public class Teste {
 
@@ -20,23 +20,33 @@ public class Teste {
 		new Drive();
 		driver = Drive.AbrirNavegador();
 	}
+//	@Test
+//	public void EntrarNaTelaDeLoginComSucesso() throws Exception {
+//		new Login();
+//		Login.EntrarTelaLogin(driver);
+//		Login.PreencherLoginComSucesso(driver);
+//		Login.FazerLoginComSucesso(driver);
+//		Login.Sair(driver);
+//		
+//	}
+//	@Test
+//	public void EntrarNaTelaDeLoginSemSucesso() throws Exception {
+//		new Login();
+//		Login.EntrarTelaLogin(driver);
+//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+//		Login.PreencherLoginSemSucesso(driver);
+//		Login.FazerLoginSemSucesso(driver);
+//		Login.Sair(driver);
+//	}
 	@Test
-	public void EntrarNaTelaDeLoginComSucesso() throws Exception {
-		new Login();
-		Login.EntrarTelaLogin(driver);
-		Login.PreencherLoginComSucesso(driver);
-		Login.FazerLoginComSucesso(driver);
-		Login.Sair(driver);
+	public void EntrarNaTelaDeCadastroComSucesso() throws Exception {
+		new CadastroComSucesso();
+		CadastroComSucesso.AbrirLink(driver);
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		CadastroComSucesso.DetalhesDaConta(driver);
 		
-	}
-	@Test
-	public void EntrarNaTelaDeLoginSemSucesso() throws Exception {
-		new Login();
-		Login.EntrarTelaLogin(driver);
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		Login.PreencherLoginSemSucesso(driver);
-		Login.FazerLoginSemSucesso(driver);
-		Login.Sair(driver);
+
+	
 	}
 
 

@@ -14,8 +14,8 @@ public class Login {
 	
 	public static void EntrarTelaLogin(WebDriver driver) {
 		
-		driver.findElement(By.id("menuUserLink")).click();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.findElement(By.id("menuUser")).click();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 	}
 	
 	public static void PreencherLoginComSucesso(WebDriver driver) throws Exception { 
