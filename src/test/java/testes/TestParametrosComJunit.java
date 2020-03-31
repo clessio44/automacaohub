@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import PageObjectTDD.CadastroComSucesso;
 import PageObjectTDD.Drive;
 
-public class Teste {
+public class TestParametrosComJunit {
 
 	public WebDriver driver;
 

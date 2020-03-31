@@ -1,14 +1,21 @@
 package testes;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
 
 import PageObjectTDD.CadastroComSucesso;
 import PageObjectTDD.CadastroSemSucesso;
 import PageObjectTDD.Drive;
+import PageObjectTDD.ExtentReport;
 import PageObjectTDD.Login;
 import PageObjectTDD.PesquisaInexistenteComLupa;
 import PageObjectTDD.PesquisaInexistentePorClick;
@@ -17,7 +24,21 @@ import PageObjectTDD.PesquisarPorClick;
 
 public class TestNG {
 	
+	private static final String testName = null;
+	public static ExtentTest test;
 	public WebDriver driver;
+	
+	
+	@BeforeSuite
+	public void extent() {
+		new ExtentReport();
+		ExtentReport.ConfigurationReport("Login");
+	}
+	 @BeforeMethod 
+	  public void Abrir() {
+				new Drive();
+				driver = Drive.AbrirNavegador();
+	  }
 	
 	@Test(priority = 0)
 	public void EntrarNaTelaDeLoginComSucesso() throws Exception {
@@ -26,7 +47,6 @@ public class TestNG {
 		Login.PreencherLoginComSucesso(driver);
 		Login.FazerLoginComSucesso(driver);
 		Login.Sair(driver);
-		
 	}
 	@Test(priority = 1)
 	public void EntrarNaTelaDeLoginSemSucesso() throws Exception {
@@ -85,9 +105,14 @@ public class TestNG {
 		PesquisaInexistenteComLupa.ClicarCampoPesquisaComItensInexistente(driver);
 		PesquisaInexistenteComLupa.Sair(driver);
 	}
-  @BeforeMethod 
-  public void Abrir() {
-			new Drive();
-			driver = Drive.AbrirNavegador();
-  }
+	@AfterMethod
+	public void reporting (ITestResult result) throws IOException{
+		test = ExtentReport.ReportRelatorio(testName);
+		ExtentReport.relatorioReport(test, result, driver);
+		
+	}
+//	@AfterSuite
+//	public void closereporting() {
+//		ExtentReport
+//	}
 }

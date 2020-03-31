@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Login { 
+public class Login {  
 
 	public static WebDriver driver; 
 	
@@ -39,6 +39,7 @@ public class Login {
 		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.findElement(By.id("sign_in_btnundefined")).click();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 	public static void PreencherLoginSemSucesso(WebDriver driver) throws Exception { 
 		
