@@ -1,503 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="1" failed="0" skipped="7">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-31T17:37:47 GMT-03:00" name="Default suite" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="13039">
+  <suite started-at="2020-04-01T09:08:51 GMT-03:00" name="Default suite" finished-at="2020-04-01T09:10:44 GMT-03:00" duration-ms="112917">
     <groups>
     </groups>
-    <test started-at="2020-03-31T17:37:47 GMT-03:00" name="Default test" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="13039">
+    <test started-at="2020-04-01T09:08:51 GMT-03:00" name="Default test" finished-at="2020-04-01T09:10:44 GMT-03:00" duration-ms="112917">
       <class name="testes.TestNG">
-        <test-method is-config="true" signature="extent()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:37:46 GMT-03:00" name="extent" finished-at="2020-03-31T17:37:47 GMT-03:00" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="extent()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:08:51 GMT-03:00" name="extent" finished-at="2020-04-01T09:08:51 GMT-03:00" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extent -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:37:47 GMT-03:00" name="Abrir" finished-at="2020-03-31T17:37:58 GMT-03:00" duration-ms="11169" status="PASS">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:08:51 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:09:02 GMT-03:00" duration-ms="11019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="EntrarNaTelaDeLoginComSucesso()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:37:58 GMT-03:00" name="EntrarNaTelaDeLoginComSucesso" finished-at="2020-03-31T17:37:59 GMT-03:00" duration-ms="1794" status="PASS">
+        <test-method signature="EntrarNaTelaDeLoginComSucesso()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:02 GMT-03:00" name="EntrarNaTelaDeLoginComSucesso" finished-at="2020-04-01T09:09:06 GMT-03:00" duration-ms="3457" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button id="sign_in_btnundefined" type="button" class="sec-sender-a ng-scope" role="button" data-ng-click="senderCtrl.send()">...</button> is not clickable at point (683, 406). Other element would receive the click: <div class="loader" style="display: block; opacity: 0.201888;">...</div>
+  (Session info: chrome=80.0.3987.149)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SKAR1201144', ip: '10.1.0.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\CLESSI~1.SIL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7e31d4079c675d5bd18cb1af5e7024da]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="sign_in_btnundefined" type="button" class="sec-sender-a ng-scope" role="button" data-ng-click="senderCtrl.send()">...</button> is not clickable at point (683, 406). Other element would receive the click: <div class="loader" style="display: block; opacity: 0.201888;">...</div>
+  (Session info: chrome=80.0.3987.149)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SKAR1201144', ip: '10.1.0.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\CLESSI~1.SIL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7e31d4079c675d5bd18cb1af5e7024da
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at PageObjectTDD.Login.FazerLoginComSucesso(Login.java:41)
+at testes.TestNG.EntrarNaTelaDeLoginComSucesso(TestNG.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EntrarNaTelaDeLoginComSucesso -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:37:59 GMT-03:00" name="reporting" finished-at="2020-03-31T17:37:59 GMT-03:00" duration-ms="3" status="FAIL">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:06 GMT-03:00" name="reporting" finished-at="2020-04-01T09:09:06 GMT-03:00" duration-ms="14" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EntrarNaTelaDeLoginComSucesso status=SUCCESS method=TestNG.EntrarNaTelaDeLoginComSucesso()[pri:0, instance:testes.TestNG@4690b489] output={null}]]]>
+                <![CDATA[[TestResult name=EntrarNaTelaDeLoginComSucesso status=FAILURE method=TestNG.EntrarNaTelaDeLoginComSucesso()[pri:0, instance:testes.TestNG@460d0a57] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:37:59 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687079998" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:06 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:09:16 GMT-03:00" duration-ms="10261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="EntrarNaTelaDeLoginSemSucesso()[pri:1, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="EntrarNaTelaDeLoginSemSucesso" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="EntrarNaTelaDeLoginSemSucesso()[pri:1, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:16 GMT-03:00" name="EntrarNaTelaDeLoginSemSucesso" finished-at="2020-04-01T09:09:18 GMT-03:00" duration-ms="2045" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EntrarNaTelaDeLoginSemSucesso -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080006" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:18 GMT-03:00" name="reporting" finished-at="2020-04-01T09:09:18 GMT-03:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EntrarNaTelaDeLoginSemSucesso status=SUCCESS method=TestNG.EntrarNaTelaDeLoginSemSucesso()[pri:1, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080007" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:18 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:09:28 GMT-03:00" duration-ms="10413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="EntrarNaTelaDeCadastroComSucesso()[pri:2, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="EntrarNaTelaDeCadastroComSucesso" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="EntrarNaTelaDeCadastroComSucesso()[pri:2, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:28 GMT-03:00" name="EntrarNaTelaDeCadastroComSucesso" finished-at="2020-04-01T09:09:33 GMT-03:00" duration-ms="4357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EntrarNaTelaDeCadastroComSucesso -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080012" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:33 GMT-03:00" name="reporting" finished-at="2020-04-01T09:09:33 GMT-03:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EntrarNaTelaDeCadastroComSucesso status=SUCCESS method=TestNG.EntrarNaTelaDeCadastroComSucesso()[pri:2, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080013" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:33 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:09:43 GMT-03:00" duration-ms="10188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="TelaCadastroComDadosInvalidos()[pri:3, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="TelaCadastroComDadosInvalidos" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="TelaCadastroComDadosInvalidos()[pri:3, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:43 GMT-03:00" name="TelaCadastroComDadosInvalidos" finished-at="2020-04-01T09:09:53 GMT-03:00" duration-ms="9775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TelaCadastroComDadosInvalidos -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080018" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:53 GMT-03:00" name="reporting" finished-at="2020-04-01T09:09:53 GMT-03:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TelaCadastroComDadosInvalidos status=SUCCESS method=TestNG.TelaCadastroComDadosInvalidos()[pri:3, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080022" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:09:53 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:10:03 GMT-03:00" duration-ms="10318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="ClickProduto()[pri:4, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="ClickProduto" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="ClickProduto()[pri:4, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:03 GMT-03:00" name="ClickProduto" finished-at="2020-04-01T09:10:07 GMT-03:00" duration-ms="4406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickProduto -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080025" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:07 GMT-03:00" name="reporting" finished-at="2020-04-01T09:10:07 GMT-03:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ClickProduto status=SUCCESS method=TestNG.ClickProduto()[pri:4, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080027" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:07 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:10:18 GMT-03:00" duration-ms="10236" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="PesquisaDeItensInexistentesPorClick()[pri:5, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="PesquisaDeItensInexistentesPorClick" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="PesquisaDeItensInexistentesPorClick()[pri:5, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:18 GMT-03:00" name="PesquisaDeItensInexistentesPorClick" finished-at="2020-04-01T09:10:21 GMT-03:00" duration-ms="3536" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PesquisaDeItensInexistentesPorClick -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080030" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:21 GMT-03:00" name="reporting" finished-at="2020-04-01T09:10:21 GMT-03:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PesquisaDeItensInexistentesPorClick status=SUCCESS method=TestNG.PesquisaDeItensInexistentesPorClick()[pri:5, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080032" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:21 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:10:32 GMT-03:00" duration-ms="10361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="PesquisarComLupa()[pri:6, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="PesquisarComLupa" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="PesquisarComLupa()[pri:6, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:32 GMT-03:00" name="PesquisarComLupa" finished-at="2020-04-01T09:10:33 GMT-03:00" duration-ms="1138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PesquisarComLupa -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080037" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:33 GMT-03:00" name="reporting" finished-at="2020-04-01T09:10:33 GMT-03:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PesquisarComLupa status=SUCCESS method=TestNG.PesquisarComLupa()[pri:6, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="Abrir" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080038" status="SKIP">
+        <test-method is-config="true" signature="Abrir()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:33 GMT-03:00" name="Abrir" finished-at="2020-04-01T09:10:43 GMT-03:00" duration-ms="10203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Abrir -->
-        <test-method signature="PesquisarComItensInexistentesComLupa()[pri:7, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="PesquisarComItensInexistentesComLupa" finished-at="2020-03-31T17:38:00 GMT-03:00" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[testName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: testName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:80)
-at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:100)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:227)
-at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:243)
-at PageObjectTDD.ExtentReport.ReportRelatorio(ExtentReport.java:33)
-at testes.TestNG.reporting(TestNG.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="PesquisarComItensInexistentesComLupa()[pri:7, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:43 GMT-03:00" name="PesquisarComItensInexistentesComLupa" finished-at="2020-04-01T09:10:44 GMT-03:00" duration-ms="1137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PesquisarComItensInexistentesComLupa -->
-        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@4690b489]" started-at="2020-03-31T17:38:00 GMT-03:00" name="reporting" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1585687080043" status="SKIP">
+        <test-method is-config="true" signature="reporting(org.testng.ITestResult)[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:44 GMT-03:00" name="reporting" finished-at="2020-04-01T09:10:44 GMT-03:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PesquisarComItensInexistentesComLupa status=SUCCESS method=TestNG.PesquisarComItensInexistentesComLupa()[pri:7, instance:testes.TestNG@460d0a57] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
+        <test-method is-config="true" signature="endreport()[pri:0, instance:testes.TestNG@460d0a57]" started-at="2020-04-01T09:10:44 GMT-03:00" name="endreport" finished-at="2020-04-01T09:10:45 GMT-03:00" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
       </class> <!-- testes.TestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

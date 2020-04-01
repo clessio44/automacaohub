@@ -6,11 +6,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentTest;
 
 import PageObjectTDD.CadastroComSucesso;
 import PageObjectTDD.CadastroSemSucesso;
@@ -24,15 +23,13 @@ import PageObjectTDD.PesquisarPorClick;
 
 public class TestNG {
 	
-	private static final String testName = null;
-	public static ExtentTest test;
+	public static ExtentReport extReport = new ExtentReport();
 	public WebDriver driver;
 	
 	
 	@BeforeSuite
 	public void extent() {
-		new ExtentReport();
-		ExtentReport.ConfigurationReport("Login");
+		extReport.ConfigurationReport("Login");
 	}
 	 @BeforeMethod 
 	  public void Abrir() {
@@ -42,6 +39,9 @@ public class TestNG {
 	
 	@Test(priority = 0)
 	public void EntrarNaTelaDeLoginComSucesso() throws Exception {
+		
+		new ExtentReport();
+		extReport.ReportRelatorio("Login");
 		new Login();
 		Login.EntrarTelaLogin(driver);
 		Login.PreencherLoginComSucesso(driver);
@@ -50,6 +50,7 @@ public class TestNG {
 	}
 	@Test(priority = 1)
 	public void EntrarNaTelaDeLoginSemSucesso() throws Exception {
+		extReport.ReportRelatorio("LoginSemSucesso");
 		new Login();
 		Login.EntrarTelaLogin(driver);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
@@ -59,6 +60,7 @@ public class TestNG {
 	}
 	@Test(priority = 2)//(enabled = false)
 	public void EntrarNaTelaDeCadastroComSucesso() throws Exception {
+		extReport.ReportRelatorio("Cadastro");
 		new CadastroComSucesso();
 		CadastroComSucesso.AbrirLink(driver);
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
@@ -70,6 +72,7 @@ public class TestNG {
 	}
 	@Test(priority = 3)//(enabled = false)
 	public void TelaCadastroComDadosInvalidos() throws Exception {
+		extReport.ReportRelatorio("CadastroInvalido");
 		new CadastroComSucesso();
 		CadastroSemSucesso.AbrirLink(driver);
 		CadastroSemSucesso.DetalhesDaContaComDadosInvalidos(driver);
@@ -80,6 +83,7 @@ public class TestNG {
 	}
 	@Test(priority = 4)//(enabled = false)
 	public void ClickProduto() {
+		extReport.ReportRelatorio("ClickProduto");
 		new PesquisarPorClick();
 		// driver = PesquisarPorClick.ClicarCampoPesquisa();
 		PesquisarPorClick.ClicarCampoPesquisa(driver);
@@ -87,12 +91,14 @@ public class TestNG {
 	}
 	@Test(priority = 5)//(enabled = false)
 	public void PesquisaDeItensInexistentesPorClick() {
+		extReport.ReportRelatorio("ClickProdutoInexistente");
 		new PesquisaInexistentePorClick();
 		PesquisaInexistentePorClick.ClicarCampoPesquisa(driver);
 		PesquisaInexistentePorClick.Sair(driver);
 	}
 	@Test(priority = 6)
 	public void PesquisarComLupa() {
+		extReport.ReportRelatorio("Lupa");
 		new PesquisaLupa();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		PesquisaLupa.ClicarCampoPesquisa(driver);
@@ -100,6 +106,7 @@ public class TestNG {
 	}
 	@Test(priority = 7)
 	public void PesquisarComItensInexistentesComLupa() {
+		extReport.ReportRelatorio("LupaInexistente");
 		new PesquisaInexistenteComLupa();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		PesquisaInexistenteComLupa.ClicarCampoPesquisaComItensInexistente(driver);
@@ -107,12 +114,12 @@ public class TestNG {
 	}
 	@AfterMethod
 	public void reporting (ITestResult result) throws IOException{
-		test = ExtentReport.ReportRelatorio(testName);
-		ExtentReport.relatorioReport(test, result, driver);
+		extReport.ReportRelatorio(result.getName());
+		extReport.relatorioReport(result, driver);
 		
 	}
-//	@AfterSuite
-//	public void closereporting() {
-//		ExtentReport
-//	}
+	@AfterSuite
+	public void endreport() {
+		extReport.endReport();
+	}
 }

@@ -26,7 +26,7 @@ public class Login {
 		String data0 = st.getRow(1).getCell(0).getStringCellValue();
 		WebElement username = driver.findElement(By.name("username"));
 		username.sendKeys(data0);
-		
+		 
 		String data01 = st.getRow(1).getCell(1).getStringCellValue();
 		WebElement password = driver.findElement(By.name("password"));
 		password.sendKeys(data01);

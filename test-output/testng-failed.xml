@@ -5,16 +5,11 @@
     <classes>
       <class name="testes.TestNG">
         <methods>
-          <include name="EntrarNaTelaDeCadastroComSucesso"/>
-          <include name="TelaCadastroComDadosInvalidos"/>
+          <include name="endreport"/>
           <include name="reporting"/>
-          <include name="EntrarNaTelaDeLoginSemSucesso"/>
           <include name="extent"/>
-          <include name="ClickProduto"/>
-          <include name="PesquisaDeItensInexistentesPorClick"/>
-          <include name="PesquisarComItensInexistentesComLupa"/>
           <include name="Abrir"/>
-          <include name="PesquisarComLupa"/>
+          <include name="EntrarNaTelaDeLoginComSucesso"/>
         </methods>
       </class> <!-- testes.TestNG -->
     </classes>

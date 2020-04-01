@@ -18,7 +18,7 @@ public class ExtentReport {
 
 	//before
 	public static void ConfigurationReport(String nameTest) {
-		htmlReporter = new ExtentHtmlReporter("src/test/resources/Reports.html");
+		htmlReporter = new ExtentHtmlReporter("src/test/resources/Reports/Report.html");
 		
 	//	htmlReporter.config().setEncoding("utf-8");
 		htmlReporter.config().setDocumentTitle("Relatorio TDD");
@@ -37,7 +37,7 @@ public class ExtentReport {
 		return test;
 	}
 	
-	public static void relatorioReport(ExtentTest test, ITestResult result, WebDriver driver) {
+	public static void relatorioReport(ITestResult result, WebDriver driver) {
 		if(result.getStatus() == ITestResult.FAILURE){
 			test.log(Status.FAIL, "TestCase Fail" + result.getName());
 			test.log(Status.FAIL, "TestCase Fail" + result.getThrowable());
